@@ -5,7 +5,7 @@ import mlflow.pyfunc
 app = Flask(__name__)
 
 # Charger le modèle enregistré avec MLflow
-model = mlflow.pyfunc.load_model("model")
+model = mlflow.pyfunc.load_model("model.pkl")
 
 @app.route('/predict', methods=['POST'])
 def predict():
