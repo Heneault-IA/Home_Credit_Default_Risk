@@ -38,4 +38,13 @@ jobs:
   
       - name: Test
         run: |
-          python -m pytest -vv tests/test_pred.py
+          python -m pytest -vv API/tests/test_pred.py
+          
+      - name: Deploy to Heroku
+        env:
+          HEROKU_API_TOKEN: ${{ secrets.HEROKU_API_TOKEN }}
+          HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
+        if: github.ref == 'refs/heads/main' && job.status == 'success'
+        run: |
+          git remote add heroku https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git
+          git push heroku HEAD:main -fn
