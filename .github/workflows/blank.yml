@@ -38,7 +38,7 @@ jobs:
   
       - name: Test
         run: |
-          python -m pytest -vv API/tests/test_pred.py
+          python -m pytest -vv API/Tests/test_pred.py
           
       - name: Deploy to Heroku
         env:
