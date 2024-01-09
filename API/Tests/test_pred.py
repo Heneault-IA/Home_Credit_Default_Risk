@@ -536,4 +536,4 @@ new_data = {
 
 def test_predict():
     prediction = model_pred(new_data)
-    assert prediction = "Accepté"
+    assert prediction == "Accepté"
