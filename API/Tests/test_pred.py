@@ -533,7 +533,7 @@ new_data = {
              'CNT_INSTALMENT_MATURE_CUM': nan,
              'CC_COUNT': nan
              }
- 
- def test_predict():
+
+def test_predict():
     prediction = model_pred(new_data)
     assert prediction = "Accepté"
