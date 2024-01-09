@@ -1,3 +1,5 @@
+from app import predict
+
 new_data = {
             'SK_ID_CURR': 285133,
             'NAME_CONTRACT_TYPE': 0,
