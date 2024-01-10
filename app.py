@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, render_template
 import numpy as np
 import mlflow.pyfunc
 
@@ -6,6 +6,10 @@ app = Flask(__name__)
 
 # Charger le modèle enregistré avec MLflow
 model = mlflow.pyfunc.load_model("model")
+
+@app.route('/', methods=['GET'])
+def Home():
+    return render_template('index.html')
 
 @app.route('/predict', methods=['POST'])
 def predict(data):
