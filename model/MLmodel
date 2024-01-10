@@ -1,0 +1,373 @@
+artifact_path: Projet7/Models/LGBM/Final
+flavors:
+  lightgbm:
+    code: null
+    data: model.pkl
+    lgb_version: 4.2.0
+    model_class: sklearn.pipeline.Pipeline
+  python_function:
+    data: model.pkl
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.lightgbm
+    python_version: 3.11.6
+mlflow_version: 2.9.2
+model_size_bytes: 570207
+model_uuid: 0e7f88edc70c4ded92a5066f804c1af9
+run_id: 2ac8433eec064b2aa73e493cf53e2851
+signature:
+  inputs: '[{"type": "long", "name": "SK_ID_CURR"}, {"type": "long", "name": "NAME_CONTRACT_TYPE"},
+    {"type": "long", "name": "FLAG_OWN_CAR"}, {"type": "long", "name": "FLAG_OWN_REALTY"},
+    {"type": "long", "name": "CNT_CHILDREN"}, {"type": "double", "name": "AMT_INCOME_TOTAL"},
+    {"type": "double", "name": "AMT_CREDIT"}, {"type": "double", "name": "AMT_ANNUITY"},
+    {"type": "double", "name": "AMT_GOODS_PRICE"}, {"type": "double", "name": "REGION_POPULATION_RELATIVE"},
+    {"type": "long", "name": "DAYS_BIRTH_x"}, {"type": "double", "name": "DAYS_EMPLOYED"},
+    {"type": "double", "name": "DAYS_REGISTRATION"}, {"type": "long", "name": "DAYS_ID_PUBLISH"},
+    {"type": "double", "name": "OWN_CAR_AGE"}, {"type": "long", "name": "FLAG_MOBIL"},
+    {"type": "long", "name": "FLAG_EMP_PHONE"}, {"type": "long", "name": "FLAG_WORK_PHONE"},
+    {"type": "long", "name": "FLAG_CONT_MOBILE"}, {"type": "long", "name": "FLAG_PHONE"},
+    {"type": "long", "name": "FLAG_EMAIL"}, {"type": "double", "name": "CNT_FAM_MEMBERS"},
+    {"type": "long", "name": "REGION_RATING_CLIENT"}, {"type": "long", "name": "REGION_RATING_CLIENT_W_CITY"},
+    {"type": "long", "name": "HOUR_APPR_PROCESS_START"}, {"type": "long", "name":
+    "REG_REGION_NOT_LIVE_REGION"}, {"type": "long", "name": "REG_REGION_NOT_WORK_REGION"},
+    {"type": "long", "name": "LIVE_REGION_NOT_WORK_REGION"}, {"type": "long", "name":
+    "REG_CITY_NOT_LIVE_CITY"}, {"type": "long", "name": "REG_CITY_NOT_WORK_CITY"},
+    {"type": "long", "name": "LIVE_CITY_NOT_WORK_CITY"}, {"type": "double", "name":
+    "EXT_SOURCE_1_x"}, {"type": "double", "name": "EXT_SOURCE_2_x"}, {"type": "double",
+    "name": "EXT_SOURCE_3_x"}, {"type": "double", "name": "APARTMENTS_AVG"}, {"type":
+    "double", "name": "BASEMENTAREA_AVG"}, {"type": "double", "name": "YEARS_BEGINEXPLUATATION_AVG"},
+    {"type": "double", "name": "YEARS_BUILD_AVG"}, {"type": "double", "name": "COMMONAREA_AVG"},
+    {"type": "double", "name": "ELEVATORS_AVG"}, {"type": "double", "name": "ENTRANCES_AVG"},
+    {"type": "double", "name": "FLOORSMAX_AVG"}, {"type": "double", "name": "FLOORSMIN_AVG"},
+    {"type": "double", "name": "LANDAREA_AVG"}, {"type": "double", "name": "LIVINGAPARTMENTS_AVG"},
+    {"type": "double", "name": "LIVINGAREA_AVG"}, {"type": "double", "name": "NONLIVINGAPARTMENTS_AVG"},
+    {"type": "double", "name": "NONLIVINGAREA_AVG"}, {"type": "double", "name": "APARTMENTS_MODE"},
+    {"type": "double", "name": "BASEMENTAREA_MODE"}, {"type": "double", "name": "YEARS_BEGINEXPLUATATION_MODE"},
+    {"type": "double", "name": "YEARS_BUILD_MODE"}, {"type": "double", "name": "COMMONAREA_MODE"},
+    {"type": "double", "name": "ELEVATORS_MODE"}, {"type": "double", "name": "ENTRANCES_MODE"},
+    {"type": "double", "name": "FLOORSMAX_MODE"}, {"type": "double", "name": "FLOORSMIN_MODE"},
+    {"type": "double", "name": "LANDAREA_MODE"}, {"type": "double", "name": "LIVINGAPARTMENTS_MODE"},
+    {"type": "double", "name": "LIVINGAREA_MODE"}, {"type": "double", "name": "NONLIVINGAPARTMENTS_MODE"},
+    {"type": "double", "name": "NONLIVINGAREA_MODE"}, {"type": "double", "name": "APARTMENTS_MEDI"},
+    {"type": "double", "name": "BASEMENTAREA_MEDI"}, {"type": "double", "name": "YEARS_BEGINEXPLUATATION_MEDI"},
+    {"type": "double", "name": "YEARS_BUILD_MEDI"}, {"type": "double", "name": "COMMONAREA_MEDI"},
+    {"type": "double", "name": "ELEVATORS_MEDI"}, {"type": "double", "name": "ENTRANCES_MEDI"},
+    {"type": "double", "name": "FLOORSMAX_MEDI"}, {"type": "double", "name": "FLOORSMIN_MEDI"},
+    {"type": "double", "name": "LANDAREA_MEDI"}, {"type": "double", "name": "LIVINGAPARTMENTS_MEDI"},
+    {"type": "double", "name": "LIVINGAREA_MEDI"}, {"type": "double", "name": "NONLIVINGAPARTMENTS_MEDI"},
+    {"type": "double", "name": "NONLIVINGAREA_MEDI"}, {"type": "double", "name": "TOTALAREA_MODE"},
+    {"type": "double", "name": "OBS_30_CNT_SOCIAL_CIRCLE"}, {"type": "double", "name":
+    "DEF_30_CNT_SOCIAL_CIRCLE"}, {"type": "double", "name": "OBS_60_CNT_SOCIAL_CIRCLE"},
+    {"type": "double", "name": "DEF_60_CNT_SOCIAL_CIRCLE"}, {"type": "double", "name":
+    "DAYS_LAST_PHONE_CHANGE"}, {"type": "long", "name": "FLAG_DOCUMENT_2"}, {"type":
+    "long", "name": "FLAG_DOCUMENT_3"}, {"type": "long", "name": "FLAG_DOCUMENT_4"},
+    {"type": "long", "name": "FLAG_DOCUMENT_5"}, {"type": "long", "name": "FLAG_DOCUMENT_6"},
+    {"type": "long", "name": "FLAG_DOCUMENT_7"}, {"type": "long", "name": "FLAG_DOCUMENT_8"},
+    {"type": "long", "name": "FLAG_DOCUMENT_9"}, {"type": "long", "name": "FLAG_DOCUMENT_10"},
+    {"type": "long", "name": "FLAG_DOCUMENT_11"}, {"type": "long", "name": "FLAG_DOCUMENT_12"},
+    {"type": "long", "name": "FLAG_DOCUMENT_13"}, {"type": "long", "name": "FLAG_DOCUMENT_14"},
+    {"type": "long", "name": "FLAG_DOCUMENT_15"}, {"type": "long", "name": "FLAG_DOCUMENT_16"},
+    {"type": "long", "name": "FLAG_DOCUMENT_17"}, {"type": "long", "name": "FLAG_DOCUMENT_18"},
+    {"type": "long", "name": "FLAG_DOCUMENT_19"}, {"type": "long", "name": "FLAG_DOCUMENT_20"},
+    {"type": "long", "name": "FLAG_DOCUMENT_21"}, {"type": "double", "name": "AMT_REQ_CREDIT_BUREAU_HOUR"},
+    {"type": "double", "name": "AMT_REQ_CREDIT_BUREAU_DAY"}, {"type": "double", "name":
+    "AMT_REQ_CREDIT_BUREAU_WEEK"}, {"type": "double", "name": "AMT_REQ_CREDIT_BUREAU_MON"},
+    {"type": "double", "name": "AMT_REQ_CREDIT_BUREAU_QRT"}, {"type": "double", "name":
+    "AMT_REQ_CREDIT_BUREAU_YEAR"}, {"type": "boolean", "name": "CODE_GENDER_F"}, {"type":
+    "boolean", "name": "CODE_GENDER_M"}, {"type": "boolean", "name": "CODE_GENDER_XNA"},
+    {"type": "boolean", "name": "CODE_GENDER_nan"}, {"type": "boolean", "name": "NAME_TYPE_SUITE_Children"},
+    {"type": "boolean", "name": "NAME_TYPE_SUITE_Family"}, {"type": "boolean", "name":
+    "NAME_TYPE_SUITE_Group of people"}, {"type": "boolean", "name": "NAME_TYPE_SUITE_Other_A"},
+    {"type": "boolean", "name": "NAME_TYPE_SUITE_Other_B"}, {"type": "boolean", "name":
+    "NAME_TYPE_SUITE_Spouse, partner"}, {"type": "boolean", "name": "NAME_TYPE_SUITE_Unaccompanied"},
+    {"type": "boolean", "name": "NAME_TYPE_SUITE_nan"}, {"type": "boolean", "name":
+    "NAME_INCOME_TYPE_Businessman"}, {"type": "boolean", "name": "NAME_INCOME_TYPE_Commercial
+    associate"}, {"type": "boolean", "name": "NAME_INCOME_TYPE_Maternity leave"},
+    {"type": "boolean", "name": "NAME_INCOME_TYPE_Pensioner"}, {"type": "boolean",
+    "name": "NAME_INCOME_TYPE_State servant"}, {"type": "boolean", "name": "NAME_INCOME_TYPE_Student"},
+    {"type": "boolean", "name": "NAME_INCOME_TYPE_Unemployed"}, {"type": "boolean",
+    "name": "NAME_INCOME_TYPE_Working"}, {"type": "boolean", "name": "NAME_INCOME_TYPE_nan"},
+    {"type": "boolean", "name": "NAME_EDUCATION_TYPE_Academic degree"}, {"type": "boolean",
+    "name": "NAME_EDUCATION_TYPE_Higher education"}, {"type": "boolean", "name": "NAME_EDUCATION_TYPE_Incomplete
+    higher"}, {"type": "boolean", "name": "NAME_EDUCATION_TYPE_Lower secondary"},
+    {"type": "boolean", "name": "NAME_EDUCATION_TYPE_Secondary / secondary special"},
+    {"type": "boolean", "name": "NAME_EDUCATION_TYPE_nan"}, {"type": "boolean", "name":
+    "NAME_FAMILY_STATUS_Civil marriage"}, {"type": "boolean", "name": "NAME_FAMILY_STATUS_Married"},
+    {"type": "boolean", "name": "NAME_FAMILY_STATUS_Separated"}, {"type": "boolean",
+    "name": "NAME_FAMILY_STATUS_Single / not married"}, {"type": "boolean", "name":
+    "NAME_FAMILY_STATUS_Unknown"}, {"type": "boolean", "name": "NAME_FAMILY_STATUS_Widow"},
+    {"type": "boolean", "name": "NAME_FAMILY_STATUS_nan"}, {"type": "boolean", "name":
+    "NAME_HOUSING_TYPE_Co-op apartment"}, {"type": "boolean", "name": "NAME_HOUSING_TYPE_House
+    / apartment"}, {"type": "boolean", "name": "NAME_HOUSING_TYPE_Municipal apartment"},
+    {"type": "boolean", "name": "NAME_HOUSING_TYPE_Office apartment"}, {"type": "boolean",
+    "name": "NAME_HOUSING_TYPE_Rented apartment"}, {"type": "boolean", "name": "NAME_HOUSING_TYPE_With
+    parents"}, {"type": "boolean", "name": "NAME_HOUSING_TYPE_nan"}, {"type": "boolean",
+    "name": "OCCUPATION_TYPE_Accountants"}, {"type": "boolean", "name": "OCCUPATION_TYPE_Cleaning
+    staff"}, {"type": "boolean", "name": "OCCUPATION_TYPE_Cooking staff"}, {"type":
+    "boolean", "name": "OCCUPATION_TYPE_Core staff"}, {"type": "boolean", "name":
+    "OCCUPATION_TYPE_Drivers"}, {"type": "boolean", "name": "OCCUPATION_TYPE_HR staff"},
+    {"type": "boolean", "name": "OCCUPATION_TYPE_High skill tech staff"}, {"type":
+    "boolean", "name": "OCCUPATION_TYPE_IT staff"}, {"type": "boolean", "name": "OCCUPATION_TYPE_Laborers"},
+    {"type": "boolean", "name": "OCCUPATION_TYPE_Low-skill Laborers"}, {"type": "boolean",
+    "name": "OCCUPATION_TYPE_Managers"}, {"type": "boolean", "name": "OCCUPATION_TYPE_Medicine
+    staff"}, {"type": "boolean", "name": "OCCUPATION_TYPE_Private service staff"},
+    {"type": "boolean", "name": "OCCUPATION_TYPE_Realty agents"}, {"type": "boolean",
+    "name": "OCCUPATION_TYPE_Sales staff"}, {"type": "boolean", "name": "OCCUPATION_TYPE_Secretaries"},
+    {"type": "boolean", "name": "OCCUPATION_TYPE_Security staff"}, {"type": "boolean",
+    "name": "OCCUPATION_TYPE_Waiters/barmen staff"}, {"type": "boolean", "name": "OCCUPATION_TYPE_nan"},
+    {"type": "boolean", "name": "WEEKDAY_APPR_PROCESS_START_FRIDAY"}, {"type": "boolean",
+    "name": "WEEKDAY_APPR_PROCESS_START_MONDAY"}, {"type": "boolean", "name": "WEEKDAY_APPR_PROCESS_START_SATURDAY"},
+    {"type": "boolean", "name": "WEEKDAY_APPR_PROCESS_START_SUNDAY"}, {"type": "boolean",
+    "name": "WEEKDAY_APPR_PROCESS_START_THURSDAY"}, {"type": "boolean", "name": "WEEKDAY_APPR_PROCESS_START_TUESDAY"},
+    {"type": "boolean", "name": "WEEKDAY_APPR_PROCESS_START_WEDNESDAY"}, {"type":
+    "boolean", "name": "WEEKDAY_APPR_PROCESS_START_nan"}, {"type": "boolean", "name":
+    "ORGANIZATION_TYPE_Advertising"}, {"type": "boolean", "name": "ORGANIZATION_TYPE_Agriculture"},
+    {"type": "boolean", "name": "ORGANIZATION_TYPE_Bank"}, {"type": "boolean", "name":
+    "ORGANIZATION_TYPE_Business Entity Type 1"}, {"type": "boolean", "name": "ORGANIZATION_TYPE_Business
+    Entity Type 2"}, {"type": "boolean", "name": "ORGANIZATION_TYPE_Business Entity
+    Type 3"}, {"type": "boolean", "name": "ORGANIZATION_TYPE_Cleaning"}, {"type":
+    "boolean", "name": "ORGANIZATION_TYPE_Construction"}, {"type": "boolean", "name":
+    "ORGANIZATION_TYPE_Culture"}, {"type": "boolean", "name": "ORGANIZATION_TYPE_Electricity"},
+    {"type": "boolean", "name": "ORGANIZATION_TYPE_Emergency"}, {"type": "boolean",
+    "name": "ORGANIZATION_TYPE_Government"}, {"type": "boolean", "name": "ORGANIZATION_TYPE_Hotel"},
+    {"type": "boolean", "name": "ORGANIZATION_TYPE_Housing"}, {"type": "boolean",
+    "name": "ORGANIZATION_TYPE_Industry: type 1"}, {"type": "boolean", "name": "ORGANIZATION_TYPE_Industry:
+    type 10"}, {"type": "boolean", "name": "ORGANIZATION_TYPE_Industry: type 11"},
+    {"type": "boolean", "name": "ORGANIZATION_TYPE_Industry: type 12"}, {"type": "boolean",
+    "name": "ORGANIZATION_TYPE_Industry: type 13"}, {"type": "boolean", "name": "ORGANIZATION_TYPE_Industry:
+    type 2"}, {"type": "boolean", "name": "ORGANIZATION_TYPE_Industry: type 3"}, {"type":
+    "boolean", "name": "ORGANIZATION_TYPE_Industry: type 4"}, {"type": "boolean",
+    "name": "ORGANIZATION_TYPE_Industry: type 5"}, {"type": "boolean", "name": "ORGANIZATION_TYPE_Industry:
+    type 6"}, {"type": "boolean", "name": "ORGANIZATION_TYPE_Industry: type 7"}, {"type":
+    "boolean", "name": "ORGANIZATION_TYPE_Industry: type 8"}, {"type": "boolean",
+    "name": "ORGANIZATION_TYPE_Industry: type 9"}, {"type": "boolean", "name": "ORGANIZATION_TYPE_Insurance"},
+    {"type": "boolean", "name": "ORGANIZATION_TYPE_Kindergarten"}, {"type": "boolean",
+    "name": "ORGANIZATION_TYPE_Legal Services"}, {"type": "boolean", "name": "ORGANIZATION_TYPE_Medicine"},
+    {"type": "boolean", "name": "ORGANIZATION_TYPE_Military"}, {"type": "boolean",
+    "name": "ORGANIZATION_TYPE_Mobile"}, {"type": "boolean", "name": "ORGANIZATION_TYPE_Other"},
+    {"type": "boolean", "name": "ORGANIZATION_TYPE_Police"}, {"type": "boolean", "name":
+    "ORGANIZATION_TYPE_Postal"}, {"type": "boolean", "name": "ORGANIZATION_TYPE_Realtor"},
+    {"type": "boolean", "name": "ORGANIZATION_TYPE_Religion"}, {"type": "boolean",
+    "name": "ORGANIZATION_TYPE_Restaurant"}, {"type": "boolean", "name": "ORGANIZATION_TYPE_School"},
+    {"type": "boolean", "name": "ORGANIZATION_TYPE_Security"}, {"type": "boolean",
+    "name": "ORGANIZATION_TYPE_Security Ministries"}, {"type": "boolean", "name":
+    "ORGANIZATION_TYPE_Self-employed"}, {"type": "boolean", "name": "ORGANIZATION_TYPE_Services"},
+    {"type": "boolean", "name": "ORGANIZATION_TYPE_Telecom"}, {"type": "boolean",
+    "name": "ORGANIZATION_TYPE_Trade: type 1"}, {"type": "boolean", "name": "ORGANIZATION_TYPE_Trade:
+    type 2"}, {"type": "boolean", "name": "ORGANIZATION_TYPE_Trade: type 3"}, {"type":
+    "boolean", "name": "ORGANIZATION_TYPE_Trade: type 4"}, {"type": "boolean", "name":
+    "ORGANIZATION_TYPE_Trade: type 5"}, {"type": "boolean", "name": "ORGANIZATION_TYPE_Trade:
+    type 6"}, {"type": "boolean", "name": "ORGANIZATION_TYPE_Trade: type 7"}, {"type":
+    "boolean", "name": "ORGANIZATION_TYPE_Transport: type 1"}, {"type": "boolean",
+    "name": "ORGANIZATION_TYPE_Transport: type 2"}, {"type": "boolean", "name": "ORGANIZATION_TYPE_Transport:
+    type 3"}, {"type": "boolean", "name": "ORGANIZATION_TYPE_Transport: type 4"},
+    {"type": "boolean", "name": "ORGANIZATION_TYPE_University"}, {"type": "boolean",
+    "name": "ORGANIZATION_TYPE_XNA"}, {"type": "boolean", "name": "ORGANIZATION_TYPE_nan"},
+    {"type": "boolean", "name": "FONDKAPREMONT_MODE_not specified"}, {"type": "boolean",
+    "name": "FONDKAPREMONT_MODE_org spec account"}, {"type": "boolean", "name": "FONDKAPREMONT_MODE_reg
+    oper account"}, {"type": "boolean", "name": "FONDKAPREMONT_MODE_reg oper spec
+    account"}, {"type": "boolean", "name": "FONDKAPREMONT_MODE_nan"}, {"type": "boolean",
+    "name": "HOUSETYPE_MODE_block of flats"}, {"type": "boolean", "name": "HOUSETYPE_MODE_specific
+    housing"}, {"type": "boolean", "name": "HOUSETYPE_MODE_terraced house"}, {"type":
+    "boolean", "name": "HOUSETYPE_MODE_nan"}, {"type": "boolean", "name": "WALLSMATERIAL_MODE_Block"},
+    {"type": "boolean", "name": "WALLSMATERIAL_MODE_Mixed"}, {"type": "boolean", "name":
+    "WALLSMATERIAL_MODE_Monolithic"}, {"type": "boolean", "name": "WALLSMATERIAL_MODE_Others"},
+    {"type": "boolean", "name": "WALLSMATERIAL_MODE_Panel"}, {"type": "boolean", "name":
+    "WALLSMATERIAL_MODE_Stone, brick"}, {"type": "boolean", "name": "WALLSMATERIAL_MODE_Wooden"},
+    {"type": "boolean", "name": "WALLSMATERIAL_MODE_nan"}, {"type": "boolean", "name":
+    "EMERGENCYSTATE_MODE_No"}, {"type": "boolean", "name": "EMERGENCYSTATE_MODE_Yes"},
+    {"type": "boolean", "name": "EMERGENCYSTATE_MODE_nan"}, {"type": "boolean", "name":
+    "DAYS_EMPLOYED_ANOM"}, {"type": "double", "name": "DAYS_EMPLOYED_PERC"}, {"type":
+    "double", "name": "INCOME_CREDIT_PERC"}, {"type": "double", "name": "INCOME_PER_PERSON"},
+    {"type": "double", "name": "ANNUITY_INCOME_PERC"}, {"type": "double", "name":
+    "PAYMENT_RATE"}, {"type": "double", "name": "1"}, {"type": "double", "name": "EXT_SOURCE_1_y"},
+    {"type": "double", "name": "EXT_SOURCE_2_y"}, {"type": "double", "name": "EXT_SOURCE_3_y"},
+    {"type": "double", "name": "DAYS_BIRTH_y"}, {"type": "double", "name": "EXT_SOURCE_1^2"},
+    {"type": "double", "name": "EXT_SOURCE_1 EXT_SOURCE_2"}, {"type": "double", "name":
+    "EXT_SOURCE_1 EXT_SOURCE_3"}, {"type": "double", "name": "EXT_SOURCE_1 DAYS_BIRTH"},
+    {"type": "double", "name": "EXT_SOURCE_2^2"}, {"type": "double", "name": "EXT_SOURCE_2
+    EXT_SOURCE_3"}, {"type": "double", "name": "EXT_SOURCE_2 DAYS_BIRTH"}, {"type":
+    "double", "name": "EXT_SOURCE_3^2"}, {"type": "double", "name": "EXT_SOURCE_3
+    DAYS_BIRTH"}, {"type": "double", "name": "DAYS_BIRTH^2"}, {"type": "double", "name":
+    "EXT_SOURCE_1^3"}, {"type": "double", "name": "EXT_SOURCE_1^2 EXT_SOURCE_2"},
+    {"type": "double", "name": "EXT_SOURCE_1^2 EXT_SOURCE_3"}, {"type": "double",
+    "name": "EXT_SOURCE_1^2 DAYS_BIRTH"}, {"type": "double", "name": "EXT_SOURCE_1
+    EXT_SOURCE_2^2"}, {"type": "double", "name": "EXT_SOURCE_1 EXT_SOURCE_2 EXT_SOURCE_3"},
+    {"type": "double", "name": "EXT_SOURCE_1 EXT_SOURCE_2 DAYS_BIRTH"}, {"type": "double",
+    "name": "EXT_SOURCE_1 EXT_SOURCE_3^2"}, {"type": "double", "name": "EXT_SOURCE_1
+    EXT_SOURCE_3 DAYS_BIRTH"}, {"type": "double", "name": "EXT_SOURCE_1 DAYS_BIRTH^2"},
+    {"type": "double", "name": "EXT_SOURCE_2^3"}, {"type": "double", "name": "EXT_SOURCE_2^2
+    EXT_SOURCE_3"}, {"type": "double", "name": "EXT_SOURCE_2^2 DAYS_BIRTH"}, {"type":
+    "double", "name": "EXT_SOURCE_2 EXT_SOURCE_3^2"}, {"type": "double", "name": "EXT_SOURCE_2
+    EXT_SOURCE_3 DAYS_BIRTH"}, {"type": "double", "name": "EXT_SOURCE_2 DAYS_BIRTH^2"},
+    {"type": "double", "name": "EXT_SOURCE_3^3"}, {"type": "double", "name": "EXT_SOURCE_3^2
+    DAYS_BIRTH"}, {"type": "double", "name": "EXT_SOURCE_3 DAYS_BIRTH^2"}, {"type":
+    "double", "name": "DAYS_BIRTH^3"}, {"type": "double", "name": "DAYS_CREDIT"},
+    {"type": "double", "name": "CREDIT_DAY_OVERDUE"}, {"type": "double", "name": "DAYS_CREDIT_ENDDATE"},
+    {"type": "double", "name": "DAYS_ENDDATE_FACT"}, {"type": "double", "name": "AMT_CREDIT_MAX_OVERDUE"},
+    {"type": "double", "name": "CNT_CREDIT_PROLONG"}, {"type": "double", "name": "AMT_CREDIT_SUM"},
+    {"type": "double", "name": "AMT_CREDIT_SUM_DEBT"}, {"type": "double", "name":
+    "AMT_CREDIT_SUM_LIMIT"}, {"type": "double", "name": "AMT_CREDIT_SUM_OVERDUE"},
+    {"type": "double", "name": "DAYS_CREDIT_UPDATE"}, {"type": "double", "name": "MONTHS_BALANCE"},
+    {"type": "boolean", "name": "CREDIT_ACTIVE_Active"}, {"type": "boolean", "name":
+    "CREDIT_ACTIVE_Bad debt"}, {"type": "boolean", "name": "CREDIT_ACTIVE_Closed"},
+    {"type": "boolean", "name": "CREDIT_ACTIVE_Sold"}, {"type": "boolean", "name":
+    "CREDIT_ACTIVE_nan"}, {"type": "boolean", "name": "CREDIT_CURRENCY_currency 1"},
+    {"type": "boolean", "name": "CREDIT_CURRENCY_currency 2"}, {"type": "boolean",
+    "name": "CREDIT_CURRENCY_currency 3"}, {"type": "boolean", "name": "CREDIT_CURRENCY_nan"},
+    {"type": "boolean", "name": "CREDIT_TYPE_Another type of loan"}, {"type": "boolean",
+    "name": "CREDIT_TYPE_Car loan"}, {"type": "boolean", "name": "CREDIT_TYPE_Cash
+    loan (non-earmarked)"}, {"type": "boolean", "name": "CREDIT_TYPE_Consumer credit"},
+    {"type": "boolean", "name": "CREDIT_TYPE_Credit card"}, {"type": "boolean", "name":
+    "CREDIT_TYPE_Loan for business development"}, {"type": "boolean", "name": "CREDIT_TYPE_Loan
+    for the purchase of equipment"}, {"type": "boolean", "name": "CREDIT_TYPE_Loan
+    for working capital replenishment"}, {"type": "boolean", "name": "CREDIT_TYPE_Microloan"},
+    {"type": "boolean", "name": "CREDIT_TYPE_Mortgage"}, {"type": "boolean", "name":
+    "CREDIT_TYPE_Real estate loan"}, {"type": "boolean", "name": "CREDIT_TYPE_Unknown
+    type of loan"}, {"type": "boolean", "name": "CREDIT_TYPE_nan"}, {"type": "boolean",
+    "name": "STATUS_0"}, {"type": "boolean", "name": "STATUS_1"}, {"type": "boolean",
+    "name": "STATUS_2"}, {"type": "boolean", "name": "STATUS_3"}, {"type": "boolean",
+    "name": "STATUS_5"}, {"type": "boolean", "name": "STATUS_C"}, {"type": "boolean",
+    "name": "STATUS_X"}, {"type": "boolean", "name": "STATUS_nan"}, {"type": "double",
+    "name": "AMT_APPLICATION"}, {"type": "double", "name": "AMT_DOWN_PAYMENT"}, {"type":
+    "double", "name": "NFLAG_LAST_APPL_IN_DAY"}, {"type": "double", "name": "RATE_DOWN_PAYMENT"},
+    {"type": "double", "name": "RATE_INTEREST_PRIMARY"}, {"type": "double", "name":
+    "RATE_INTEREST_PRIVILEGED"}, {"type": "double", "name": "DAYS_DECISION"}, {"type":
+    "double", "name": "SELLERPLACE_AREA"}, {"type": "double", "name": "CNT_PAYMENT"},
+    {"type": "double", "name": "DAYS_FIRST_DRAWING"}, {"type": "double", "name": "DAYS_FIRST_DUE"},
+    {"type": "double", "name": "DAYS_LAST_DUE_1ST_VERSION"}, {"type": "double", "name":
+    "DAYS_LAST_DUE"}, {"type": "double", "name": "DAYS_TERMINATION"}, {"type": "double",
+    "name": "NFLAG_INSURED_ON_APPROVAL"}, {"type": "double", "name": "APP_CREDIT_PERC"},
+    {"type": "boolean", "name": "NAME_CONTRACT_TYPE_Cash loans"}, {"type": "boolean",
+    "name": "NAME_CONTRACT_TYPE_Consumer loans"}, {"type": "boolean", "name": "NAME_CONTRACT_TYPE_Revolving
+    loans"}, {"type": "boolean", "name": "NAME_CONTRACT_TYPE_XNA"}, {"type": "boolean",
+    "name": "NAME_CONTRACT_TYPE_nan"}, {"type": "boolean", "name": "FLAG_LAST_APPL_PER_CONTRACT_N"},
+    {"type": "boolean", "name": "FLAG_LAST_APPL_PER_CONTRACT_Y"}, {"type": "boolean",
+    "name": "FLAG_LAST_APPL_PER_CONTRACT_nan"}, {"type": "boolean", "name": "NAME_CASH_LOAN_PURPOSE_Building
+    a house or an annex"}, {"type": "boolean", "name": "NAME_CASH_LOAN_PURPOSE_Business
+    development"}, {"type": "boolean", "name": "NAME_CASH_LOAN_PURPOSE_Buying a garage"},
+    {"type": "boolean", "name": "NAME_CASH_LOAN_PURPOSE_Buying a holiday home / land"},
+    {"type": "boolean", "name": "NAME_CASH_LOAN_PURPOSE_Buying a home"}, {"type":
+    "boolean", "name": "NAME_CASH_LOAN_PURPOSE_Buying a new car"}, {"type": "boolean",
+    "name": "NAME_CASH_LOAN_PURPOSE_Buying a used car"}, {"type": "boolean", "name":
+    "NAME_CASH_LOAN_PURPOSE_Car repairs"}, {"type": "boolean", "name": "NAME_CASH_LOAN_PURPOSE_Education"},
+    {"type": "boolean", "name": "NAME_CASH_LOAN_PURPOSE_Everyday expenses"}, {"type":
+    "boolean", "name": "NAME_CASH_LOAN_PURPOSE_Furniture"}, {"type": "boolean", "name":
+    "NAME_CASH_LOAN_PURPOSE_Gasification / water supply"}, {"type": "boolean", "name":
+    "NAME_CASH_LOAN_PURPOSE_Hobby"}, {"type": "boolean", "name": "NAME_CASH_LOAN_PURPOSE_Journey"},
+    {"type": "boolean", "name": "NAME_CASH_LOAN_PURPOSE_Medicine"}, {"type": "boolean",
+    "name": "NAME_CASH_LOAN_PURPOSE_Money for a third person"}, {"type": "boolean",
+    "name": "NAME_CASH_LOAN_PURPOSE_Other"}, {"type": "boolean", "name": "NAME_CASH_LOAN_PURPOSE_Payments
+    on other loans"}, {"type": "boolean", "name": "NAME_CASH_LOAN_PURPOSE_Purchase
+    of electronic equipment"}, {"type": "boolean", "name": "NAME_CASH_LOAN_PURPOSE_Refusal
+    to name the goal"}, {"type": "boolean", "name": "NAME_CASH_LOAN_PURPOSE_Repairs"},
+    {"type": "boolean", "name": "NAME_CASH_LOAN_PURPOSE_Urgent needs"}, {"type": "boolean",
+    "name": "NAME_CASH_LOAN_PURPOSE_Wedding / gift / holiday"}, {"type": "boolean",
+    "name": "NAME_CASH_LOAN_PURPOSE_XAP"}, {"type": "boolean", "name": "NAME_CASH_LOAN_PURPOSE_XNA"},
+    {"type": "boolean", "name": "NAME_CASH_LOAN_PURPOSE_nan"}, {"type": "boolean",
+    "name": "NAME_CONTRACT_STATUS_Approved"}, {"type": "boolean", "name": "NAME_CONTRACT_STATUS_Canceled"},
+    {"type": "boolean", "name": "NAME_CONTRACT_STATUS_Refused"}, {"type": "boolean",
+    "name": "NAME_CONTRACT_STATUS_Unused offer"}, {"type": "boolean", "name": "NAME_CONTRACT_STATUS_nan"},
+    {"type": "boolean", "name": "NAME_PAYMENT_TYPE_Cash through the bank"}, {"type":
+    "boolean", "name": "NAME_PAYMENT_TYPE_Cashless from the account of the employer"},
+    {"type": "boolean", "name": "NAME_PAYMENT_TYPE_Non-cash from your account"}, {"type":
+    "boolean", "name": "NAME_PAYMENT_TYPE_XNA"}, {"type": "boolean", "name": "NAME_PAYMENT_TYPE_nan"},
+    {"type": "boolean", "name": "CODE_REJECT_REASON_CLIENT"}, {"type": "boolean",
+    "name": "CODE_REJECT_REASON_HC"}, {"type": "boolean", "name": "CODE_REJECT_REASON_LIMIT"},
+    {"type": "boolean", "name": "CODE_REJECT_REASON_SCO"}, {"type": "boolean", "name":
+    "CODE_REJECT_REASON_SCOFR"}, {"type": "boolean", "name": "CODE_REJECT_REASON_SYSTEM"},
+    {"type": "boolean", "name": "CODE_REJECT_REASON_VERIF"}, {"type": "boolean", "name":
+    "CODE_REJECT_REASON_XAP"}, {"type": "boolean", "name": "CODE_REJECT_REASON_XNA"},
+    {"type": "boolean", "name": "CODE_REJECT_REASON_nan"}, {"type": "boolean", "name":
+    "NAME_CLIENT_TYPE_New"}, {"type": "boolean", "name": "NAME_CLIENT_TYPE_Refreshed"},
+    {"type": "boolean", "name": "NAME_CLIENT_TYPE_Repeater"}, {"type": "boolean",
+    "name": "NAME_CLIENT_TYPE_XNA"}, {"type": "boolean", "name": "NAME_CLIENT_TYPE_nan"},
+    {"type": "boolean", "name": "NAME_GOODS_CATEGORY_Additional Service"}, {"type":
+    "boolean", "name": "NAME_GOODS_CATEGORY_Audio/Video"}, {"type": "boolean", "name":
+    "NAME_GOODS_CATEGORY_Auto Accessories"}, {"type": "boolean", "name": "NAME_GOODS_CATEGORY_Clothing
+    and Accessories"}, {"type": "boolean", "name": "NAME_GOODS_CATEGORY_Computers"},
+    {"type": "boolean", "name": "NAME_GOODS_CATEGORY_Construction Materials"}, {"type":
+    "boolean", "name": "NAME_GOODS_CATEGORY_Consumer Electronics"}, {"type": "boolean",
+    "name": "NAME_GOODS_CATEGORY_Direct Sales"}, {"type": "boolean", "name": "NAME_GOODS_CATEGORY_Education"},
+    {"type": "boolean", "name": "NAME_GOODS_CATEGORY_Fitness"}, {"type": "boolean",
+    "name": "NAME_GOODS_CATEGORY_Furniture"}, {"type": "boolean", "name": "NAME_GOODS_CATEGORY_Gardening"},
+    {"type": "boolean", "name": "NAME_GOODS_CATEGORY_Homewares"}, {"type": "boolean",
+    "name": "NAME_GOODS_CATEGORY_Insurance"}, {"type": "boolean", "name": "NAME_GOODS_CATEGORY_Jewelry"},
+    {"type": "boolean", "name": "NAME_GOODS_CATEGORY_Medical Supplies"}, {"type":
+    "boolean", "name": "NAME_GOODS_CATEGORY_Medicine"}, {"type": "boolean", "name":
+    "NAME_GOODS_CATEGORY_Mobile"}, {"type": "boolean", "name": "NAME_GOODS_CATEGORY_Office
+    Appliances"}, {"type": "boolean", "name": "NAME_GOODS_CATEGORY_Other"}, {"type":
+    "boolean", "name": "NAME_GOODS_CATEGORY_Photo / Cinema Equipment"}, {"type": "boolean",
+    "name": "NAME_GOODS_CATEGORY_Sport and Leisure"}, {"type": "boolean", "name":
+    "NAME_GOODS_CATEGORY_Tourism"}, {"type": "boolean", "name": "NAME_GOODS_CATEGORY_Vehicles"},
+    {"type": "boolean", "name": "NAME_GOODS_CATEGORY_Weapon"}, {"type": "boolean",
+    "name": "NAME_GOODS_CATEGORY_XNA"}, {"type": "boolean", "name": "NAME_GOODS_CATEGORY_nan"},
+    {"type": "boolean", "name": "NAME_PORTFOLIO_Cards"}, {"type": "boolean", "name":
+    "NAME_PORTFOLIO_Cars"}, {"type": "boolean", "name": "NAME_PORTFOLIO_Cash"}, {"type":
+    "boolean", "name": "NAME_PORTFOLIO_POS"}, {"type": "boolean", "name": "NAME_PORTFOLIO_XNA"},
+    {"type": "boolean", "name": "NAME_PORTFOLIO_nan"}, {"type": "boolean", "name":
+    "NAME_PRODUCT_TYPE_XNA"}, {"type": "boolean", "name": "NAME_PRODUCT_TYPE_walk-in"},
+    {"type": "boolean", "name": "NAME_PRODUCT_TYPE_x-sell"}, {"type": "boolean", "name":
+    "NAME_PRODUCT_TYPE_nan"}, {"type": "boolean", "name": "CHANNEL_TYPE_AP+ (Cash
+    loan)"}, {"type": "boolean", "name": "CHANNEL_TYPE_Car dealer"}, {"type": "boolean",
+    "name": "CHANNEL_TYPE_Channel of corporate sales"}, {"type": "boolean", "name":
+    "CHANNEL_TYPE_Contact center"}, {"type": "boolean", "name": "CHANNEL_TYPE_Country-wide"},
+    {"type": "boolean", "name": "CHANNEL_TYPE_Credit and cash offices"}, {"type":
+    "boolean", "name": "CHANNEL_TYPE_Regional / Local"}, {"type": "boolean", "name":
+    "CHANNEL_TYPE_Stone"}, {"type": "boolean", "name": "CHANNEL_TYPE_nan"}, {"type":
+    "boolean", "name": "NAME_SELLER_INDUSTRY_Auto technology"}, {"type": "boolean",
+    "name": "NAME_SELLER_INDUSTRY_Clothing"}, {"type": "boolean", "name": "NAME_SELLER_INDUSTRY_Connectivity"},
+    {"type": "boolean", "name": "NAME_SELLER_INDUSTRY_Construction"}, {"type": "boolean",
+    "name": "NAME_SELLER_INDUSTRY_Consumer electronics"}, {"type": "boolean", "name":
+    "NAME_SELLER_INDUSTRY_Furniture"}, {"type": "boolean", "name": "NAME_SELLER_INDUSTRY_Industry"},
+    {"type": "boolean", "name": "NAME_SELLER_INDUSTRY_Jewelry"}, {"type": "boolean",
+    "name": "NAME_SELLER_INDUSTRY_MLM partners"}, {"type": "boolean", "name": "NAME_SELLER_INDUSTRY_Tourism"},
+    {"type": "boolean", "name": "NAME_SELLER_INDUSTRY_XNA"}, {"type": "boolean", "name":
+    "NAME_SELLER_INDUSTRY_nan"}, {"type": "boolean", "name": "NAME_YIELD_GROUP_XNA"},
+    {"type": "boolean", "name": "NAME_YIELD_GROUP_high"}, {"type": "boolean", "name":
+    "NAME_YIELD_GROUP_low_action"}, {"type": "boolean", "name": "NAME_YIELD_GROUP_low_normal"},
+    {"type": "boolean", "name": "NAME_YIELD_GROUP_middle"}, {"type": "boolean", "name":
+    "NAME_YIELD_GROUP_nan"}, {"type": "boolean", "name": "PRODUCT_COMBINATION_Card
+    Street"}, {"type": "boolean", "name": "PRODUCT_COMBINATION_Card X-Sell"}, {"type":
+    "boolean", "name": "PRODUCT_COMBINATION_Cash"}, {"type": "boolean", "name": "PRODUCT_COMBINATION_Cash
+    Street: high"}, {"type": "boolean", "name": "PRODUCT_COMBINATION_Cash Street:
+    low"}, {"type": "boolean", "name": "PRODUCT_COMBINATION_Cash Street: middle"},
+    {"type": "boolean", "name": "PRODUCT_COMBINATION_Cash X-Sell: high"}, {"type":
+    "boolean", "name": "PRODUCT_COMBINATION_Cash X-Sell: low"}, {"type": "boolean",
+    "name": "PRODUCT_COMBINATION_Cash X-Sell: middle"}, {"type": "boolean", "name":
+    "PRODUCT_COMBINATION_POS household with interest"}, {"type": "boolean", "name":
+    "PRODUCT_COMBINATION_POS household without interest"}, {"type": "boolean", "name":
+    "PRODUCT_COMBINATION_POS industry with interest"}, {"type": "boolean", "name":
+    "PRODUCT_COMBINATION_POS industry without interest"}, {"type": "boolean", "name":
+    "PRODUCT_COMBINATION_POS mobile with interest"}, {"type": "boolean", "name": "PRODUCT_COMBINATION_POS
+    mobile without interest"}, {"type": "boolean", "name": "PRODUCT_COMBINATION_POS
+    other with interest"}, {"type": "boolean", "name": "PRODUCT_COMBINATION_POS others
+    without interest"}, {"type": "boolean", "name": "PRODUCT_COMBINATION_nan"}, {"type":
+    "double", "name": "CNT_INSTALMENT"}, {"type": "double", "name": "CNT_INSTALMENT_FUTURE"},
+    {"type": "double", "name": "SK_DPD"}, {"type": "double", "name": "SK_DPD_DEF"},
+    {"type": "boolean", "name": "NAME_CONTRACT_STATUS_Active"}, {"type": "boolean",
+    "name": "NAME_CONTRACT_STATUS_Amortized debt"}, {"type": "boolean", "name": "NAME_CONTRACT_STATUS_Completed"},
+    {"type": "boolean", "name": "NAME_CONTRACT_STATUS_Demand"}, {"type": "boolean",
+    "name": "NAME_CONTRACT_STATUS_Returned to the store"}, {"type": "boolean", "name":
+    "NAME_CONTRACT_STATUS_Signed"}, {"type": "double", "name": "NUM_INSTALMENT_VERSION"},
+    {"type": "double", "name": "NUM_INSTALMENT_NUMBER"}, {"type": "double", "name":
+    "DAYS_INSTALMENT"}, {"type": "double", "name": "DAYS_ENTRY_PAYMENT"}, {"type":
+    "double", "name": "AMT_INSTALMENT"}, {"type": "double", "name": "AMT_PAYMENT"},
+    {"type": "double", "name": "PAYMENT_PERC"}, {"type": "double", "name": "PAYMENT_DIFF"},
+    {"type": "double", "name": "DPD"}, {"type": "double", "name": "DBD"}, {"type":
+    "double", "name": "AMT_BALANCE"}, {"type": "double", "name": "AMT_CREDIT_LIMIT_ACTUAL"},
+    {"type": "double", "name": "AMT_DRAWINGS_ATM_CURRENT"}, {"type": "double", "name":
+    "AMT_DRAWINGS_CURRENT"}, {"type": "double", "name": "AMT_DRAWINGS_OTHER_CURRENT"},
+    {"type": "double", "name": "AMT_DRAWINGS_POS_CURRENT"}, {"type": "double", "name":
+    "AMT_INST_MIN_REGULARITY"}, {"type": "double", "name": "AMT_PAYMENT_CURRENT"},
+    {"type": "double", "name": "AMT_PAYMENT_TOTAL_CURRENT"}, {"type": "double", "name":
+    "AMT_RECEIVABLE_PRINCIPAL"}, {"type": "double", "name": "AMT_RECIVABLE"}, {"type":
+    "double", "name": "AMT_TOTAL_RECEIVABLE"}, {"type": "double", "name": "CNT_DRAWINGS_ATM_CURRENT"},
+    {"type": "double", "name": "CNT_DRAWINGS_CURRENT"}, {"type": "double", "name":
+    "CNT_DRAWINGS_OTHER_CURRENT"}, {"type": "double", "name": "CNT_DRAWINGS_POS_CURRENT"},
+    {"type": "double", "name": "CNT_INSTALMENT_MATURE_CUM"}, {"type": "double", "name":
+    "CC_COUNT"}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1]}}]'
+  params: null
+utc_time_created: '2024-01-08 21:26:23.311097'
