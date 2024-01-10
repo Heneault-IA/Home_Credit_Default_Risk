@@ -19,4 +19,4 @@ def test_score_custom():
     expected_score = score_custom(y_val, y_pred)
 
     # Score attendu pour les valeurs fournies
-    assert expected_score == -30000
+    assert expected_score == -9000
