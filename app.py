@@ -13,9 +13,9 @@ def predict(data):
         best_tresh = 0.17061900216905868
         predictions = model.predict_proba(data)[:, 1]
         predictions = np.where(yhat >= best_tresh, "Refusé", "Accepté")
-        return jsonify({'predictions': predictions.tolist()})
+        return predictions
     except Exception as e:
-        return jsonify({'error': str(e)})
+        return print(f'error: {str(e)}')
 
 if __name__ == '__main__':
     app.run(debug=True)
