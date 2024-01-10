@@ -1,5 +1,14 @@
-from notebook import score_custom
+import sys
+import os
 from sklearn.metrics import confusion_matrix
+
+# Récupérer le chemin du dossier parent (dossier 'API')
+chemin_api = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+
+# Ajouter le chemin du dossier 'API' au chemin de recherche de Python
+sys.path.append(chemin_api)
+
+from fonction import score_custom
 
 def test_score_custom():
     # Exemple de valeurs pour les prédictions et les vraies valeurs
@@ -10,7 +19,4 @@ def test_score_custom():
     expected_score = score_custom(y_val, y_pred)
 
     # Score attendu pour les valeurs fournies
-    assert expected_score == -30000  # Ici, on vérifie si le score calculé est -30000
-
-    # Ajoutez plus de tests ici avec différents scénarios et valeurs attendues
-    # par exemple : assert score_custom(autres_valeurs_y_val, autres_valeurs_y_pred) == score_attendu
+    assert expected_score == -30000
