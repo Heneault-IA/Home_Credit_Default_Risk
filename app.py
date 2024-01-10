@@ -8,11 +8,10 @@ app = Flask(__name__)
 model = mlflow.pyfunc.load_model("model")
 
 @app.route('/predict', methods=['POST'])
-def predict():
+def predict(data):
     try:
         best_tresh = 0.17061900216905868
-        data = request.get_json(force=True)
-        predictions = model.predict_proba(data['input'])[:, 1]
+        predictions = model.predict_proba(data)[:, 1]
         predictions = np.where(yhat >= best_tresh, "Refusé", "Accepté")
         return jsonify({'predictions': predictions.tolist()})
     except Exception as e:
