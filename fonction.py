@@ -1,3 +1,5 @@
+from sklearn.metrics import confusion_matrix
+
 def score_custom(y_val, y_pred):
     tn, fp, fn, tp = confusion_matrix(y_val, y_pred).ravel()
 
