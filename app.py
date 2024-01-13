@@ -17,14 +17,15 @@ def Home():
 @app.route('/predict', methods=['POST'])
 def predict():
     if request.method == 'POST':
-        best_tresh = 0.17061900216905868
+        best_tresh = 0.54
+
         file = request.files['file']
         if file:
             # Lire le fichier CSV
             df = pd.read_csv(file)
 
             # Faire des prédictions avec le modèle
-            predictions = model.predict_proba(data)[:, 1]
+            predictions = model.model.predict_proba(data)[:, 1]
             results = np.where(predictions >= best_tresh, "Refusé", "Accepté")
 
             # Ajouter les prédictions au DataFrame
