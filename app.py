@@ -8,7 +8,7 @@ import mlflow.pyfunc
 app = Flask(__name__)
 
 # Charger le modèle enregistré avec MLflow
-model = mlflow.pyfunc.load_model("model/model.plk")
+model = mlflow.pyfunc.load_model("model/model.pkl")
 
 @app.route('/', methods=['GET'])
 def Home():
