@@ -1,3 +1,5 @@
+from ipaddress import collapse_addresses
+from operator import index
 from flask import Flask, render_template, request
 import numpy as np
 import pandas as pd
@@ -14,7 +16,7 @@ def Home():
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    try:
+    if request.method == 'POST':
         best_tresh = 0.17061900216905868
         file = request.files['file']
         if file:
@@ -23,17 +25,17 @@ def predict():
 
             # Faire des prédictions avec le modèle
             predictions = model.predict_proba(data)[:, 1]
-            predictions = np.where(predictions >= best_tresh, "Refusé", "Accepté")
+            results = np.where(predictions >= best_tresh, "Refusé", "Accepté")
 
             # Ajouter les prédictions au DataFrame
-            df['Prediction'] = predictions
+            results = pd.DataFrame(results, index=df.index, columns=["Résultat"])
 
             # Convertir le DataFrame en HTML pour l'affichage
             result_html = df.to_html(classes='table table-striped', index=False)
 
             return render_template('result.html', tables=[result_html])
-    except Exception as e:
-        return print(f'error: {str(e)}')
+    else:
+        return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
