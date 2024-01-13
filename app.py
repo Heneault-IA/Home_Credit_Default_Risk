@@ -6,7 +6,7 @@ import mlflow.pyfunc
 app = Flask(__name__)
 
 # Charger le modèle enregistré avec MLflow
-model = mlflow.pyfunc.load_model("model")
+model = mlflow.lightgbm.load_model("model")
 
 @app.route('/', methods=['GET'])
 def Home():
