@@ -31,7 +31,7 @@ def predict():
             results = pd.DataFrame(results, index=df.index, columns=["Résultat"])
 
             # Convertir le DataFrame en HTML pour l'affichage
-            result_html = df.to_html(classes='table table-striped', index=False)
+            result_html = results.to_html(classes='table table-striped', index=False)
 
             return render_template('result.html', tables=[result_html])
     else:
