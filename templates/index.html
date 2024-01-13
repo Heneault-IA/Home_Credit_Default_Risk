@@ -4,26 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Upload the Data</title>
 </head>
 
 <body>
 
     <div style="color:rgba(225, 255, 0, 0.88)">
-        <form action="{{ url_for('predict')}}" method="post">
-            <h2>Predictive Analysis NEW</h2>
-            <h3>Age</h3><input id="first" name="Age" type="number " required="required">
-            <h3>RestingBP(100-200)</h3><input id="second" name="RestingBP" required="required">
-            <h3>Cholesterol (100-600)</h3><input id="third" name="Cholesterol" required="required">
-            <h3>FastingBS (0 or 1)</h3><input id="fourth" name="FastingBS" required="required">
-            <h3>MaxHR (60-205)</h3><input id="fifth" name="MaxHR" required="required">
-            <h3>Oldpeak (0.0-6.2)</h3><input id="sixth" name="Oldpeak" required="required">
-            <br><br><button id="sub" type="submit ">Result</button>
-            <br>
-
+        <form method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".csv">
+            <button type="submit">Predict</button>
         </form>
-
-        <br><br><h3>{{ prediction_text }}<h3>
     </div>
 
 
