@@ -32,7 +32,7 @@ def predict():
             # Convertir le DataFrame en HTML pour l'affichage
             result_html = results.to_html(classes='table table-striped', index=False)
 
-            return render_template('result.html', tables=[result_html])
+            return render_template('results.html', tables=[result_html])
     else:
         return render_template('index.html')
 
