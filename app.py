@@ -1,5 +1,3 @@
-from ipaddress import collapse_addresses
-from operator import index
 from flask import Flask, render_template, request
 import numpy as np
 import pandas as pd
@@ -8,7 +6,7 @@ import mlflow.pyfunc
 app = Flask(__name__)
 
 # Charger le modèle enregistré avec MLflow
-model = mlflow.pyfunc.load_model("model/model.pkl")
+model = mlflow.pyfunc.load_model("model")
 
 @app.route('/', methods=['GET'])
 def Home():
