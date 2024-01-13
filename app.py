@@ -23,7 +23,7 @@ def predict():
             df = pd.read_csv(file)
 
             # Faire des prédictions avec le modèle
-            predictions = model.model.predict_proba(data)[:, 1]
+            predictions = model.predict_proba(data)[:, 1]
             results = np.where(predictions >= best_tresh, "Refusé", "Accepté")
 
             # Ajouter les prédictions au DataFrame
