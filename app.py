@@ -1,5 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import numpy as np
+import pandas as pd
 import mlflow.pyfunc
 
 app = Flask(__name__)
@@ -12,12 +13,25 @@ def Home():
     return render_template('index.html')
 
 @app.route('/predict', methods=['POST'])
-def predict(data):
+def predict():
     try:
         best_tresh = 0.17061900216905868
-        predictions = model.predict_proba(data)[:, 1]
-        predictions = np.where(yhat >= best_tresh, "Refusé", "Accepté")
-        return predictions
+        file = request.files['file']
+        if file:
+            # Lire le fichier CSV
+            df = pd.read_csv(file)
+
+            # Faire des prédictions avec le modèle
+            predictions = model.predict_proba(data)[:, 1]
+            predictions = np.where(predictions >= best_tresh, "Refusé", "Accepté")
+
+            # Ajouter les prédictions au DataFrame
+            df['Prediction'] = predictions
+
+            # Convertir le DataFrame en HTML pour l'affichage
+            result_html = df.to_html(classes='table table-striped', index=False)
+
+            return render_template('result.html', tables=[result_html])
     except Exception as e:
         return print(f'error: {str(e)}')
 
