@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request
 import numpy as np
 import pandas as pd
-import mlflow.pyfunc
+import mlflow
+import io
 
 app = Flask(__name__)
 
