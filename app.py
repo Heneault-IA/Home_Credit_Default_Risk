@@ -18,13 +18,13 @@ def predict():
         best_tresh = 0.51
 
         file = request.files['file']
-        
+
         app.logger.info(f"Nom du fichier reçu : {file.filename}")
         app.logger.info(f"Type de fichier reçu : {file.content_type}")
 
         if file:
             # Lire le fichier CSV
-            df = pd.read_csv(file, sep=",")
+            df = pd.read_csv(io.StringIO(request.get_data(as_text=True)))
 
             # Faire des prédictions avec le modèle
             predictions = model.predict_proba(df)[:, 1]
