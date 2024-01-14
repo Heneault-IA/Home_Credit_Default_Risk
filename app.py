@@ -15,12 +15,16 @@ def Home():
 @app.route('/predict', methods=['POST'])
 def predict():
     if request.method == 'POST':
-        best_tresh = 0.54
+        best_tresh = 0.51
 
         file = request.files['file']
+        
+        app.logger.info(f"Nom du fichier reçu : {file.filename}")
+        app.logger.info(f"Type de fichier reçu : {file.content_type}")
+
         if file:
             # Lire le fichier CSV
-            df = pd.read_csv(file)
+            df = pd.read_csv(file, sep=",")
 
             # Faire des prédictions avec le modèle
             predictions = model.predict_proba(df)[:, 1]
@@ -28,7 +32,8 @@ def predict():
 
             # Ajouter les prédictions au DataFrame
             results = pd.DataFrame(results, index=df.index, columns=["Results"])
-            results["ID"] = df.index
+            results["NB"] = df.index
+            results = results[["NB", "Results"]]
 
             # Convertir le DataFrame en HTML pour l'affichage
             result_html = results.to_html(classes='table table-striped', index=False)
