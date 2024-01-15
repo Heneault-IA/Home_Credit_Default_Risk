@@ -15,12 +15,9 @@ def Home():
 @app.route('/predict', methods=['POST'])
 def predict():
     if request.method == 'POST':
-        best_tresh = 0.51
+        best_tresh = 0.53
 
         file = request.files['file']
-        
-        app.logger.info(f"Nom du fichier reçu : {file.filename}")
-        app.logger.info(f"Type de fichier reçu : {file.content_type}")
 
         if file:
             # Lire le fichier CSV

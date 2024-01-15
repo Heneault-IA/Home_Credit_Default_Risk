@@ -13,15 +13,15 @@ flavors:
     loader_module: mlflow.lightgbm
     python_version: 3.11.6
 mlflow_version: 2.9.2
-model_size_bytes: 406508
-model_uuid: 1ffe88148db84d97a05108ec321eda5a
-run_id: de4b229f9193409cabddc5f648f2d8a3
+model_size_bytes: 407357
+model_uuid: a58341c029ec420683e8d10136f6ccc2
+run_id: 2676467cbdd04e39bbfa4611c762fe67
 signature:
-  inputs: '[{"type": "long", "name": "SK_ID_CURR"}, {"type": "long", "name": "NAME_CONTRACT_TYPE"},
-    {"type": "long", "name": "FLAG_OWN_CAR"}, {"type": "long", "name": "FLAG_OWN_REALTY"},
-    {"type": "long", "name": "CNT_CHILDREN"}, {"type": "double", "name": "AMT_INCOME_TOTAL"},
-    {"type": "double", "name": "AMT_CREDIT"}, {"type": "double", "name": "AMT_ANNUITY"},
-    {"type": "double", "name": "AMT_GOODS_PRICE"}, {"type": "double", "name": "REGION_POPULATION_RELATIVE"},
+  inputs: '[{"type": "long", "name": "NAME_CONTRACT_TYPE"}, {"type": "long", "name":
+    "FLAG_OWN_CAR"}, {"type": "long", "name": "FLAG_OWN_REALTY"}, {"type": "long",
+    "name": "CNT_CHILDREN"}, {"type": "double", "name": "AMT_INCOME_TOTAL"}, {"type":
+    "double", "name": "AMT_CREDIT"}, {"type": "double", "name": "AMT_ANNUITY"}, {"type":
+    "double", "name": "AMT_GOODS_PRICE"}, {"type": "double", "name": "REGION_POPULATION_RELATIVE"},
     {"type": "long", "name": "DAYS_BIRTH_x"}, {"type": "double", "name": "DAYS_EMPLOYED"},
     {"type": "double", "name": "DAYS_REGISTRATION"}, {"type": "long", "name": "DAYS_ID_PUBLISH"},
     {"type": "double", "name": "OWN_CAR_AGE"}, {"type": "long", "name": "FLAG_MOBIL"},
@@ -370,4 +370,4 @@ signature:
     "CC_COUNT"}]'
   outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1]}}]'
   params: null
-utc_time_created: '2024-01-10 22:51:48.588598'
+utc_time_created: '2024-01-15 10:53:23.145114'
