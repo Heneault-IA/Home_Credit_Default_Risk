@@ -4,7 +4,7 @@ cloudpickle==3.0.0
 defusedxml==0.7.1
 lightgbm==4.2.0
 matplotlib==3.8.2
-numpy==1.26.2
+numpy==1.26.3
 packaging==23.2
 pandas==2.1.4
 psutil==5.9.7
