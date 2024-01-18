@@ -30,7 +30,8 @@ def predict():
             # Ajouter les prédictions au DataFrame
             results = pd.DataFrame(results, index=df.index, columns=["Results"])
             results["NB"] = df.index
-            results = results[["NB", "Results"]]
+            results["Predict"] = predictions
+            results = results[["NB", "Predict", "Results"]]
 
             # Convertir le DataFrame en HTML pour l'affichage
             result_html = results.to_html(classes='table table-striped', index=False)
