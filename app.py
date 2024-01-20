@@ -22,6 +22,9 @@ def predict():
         if file:
             # Lire le fichier CSV
             df = pd.read_csv(file)
+            df_id = df["SK_ID_CURR"]
+
+            df.drop(columns=["SK_ID_CURR"], inplace=True)
 
             # Faire des prédictions avec le modèle
             predictions = model.predict_proba(df)[:, 1]
@@ -30,7 +33,8 @@ def predict():
             # Ajouter les prédictions au DataFrame
             results = pd.DataFrame(results, index=df.index, columns=["Results"])
             results["NB"] = df.index
-            results["Predict"] = predictions
+            results["ID"] = df_id
+            results["Predict"] = round(predictions * 100, 2)
             results = results[["NB", "Predict", "Results"]]
 
             # Convertir le DataFrame en HTML pour l'affichage
