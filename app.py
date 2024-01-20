@@ -34,7 +34,7 @@ def predict():
             results = pd.DataFrame(results, index=df.index, columns=["Results"])
             results["NB"] = df.index
             results["ID"] = df_id
-            results["Predict"] = round(predictions * 100, 2)
+            results["Predict"] = np.round(predictions * 100, 2)
             results = results[["NB", "Predict", "Results"]]
 
             # Convertir le DataFrame en HTML pour l'affichage
