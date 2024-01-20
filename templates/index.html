@@ -8,7 +8,10 @@
 </head>
 
 <body>
-
+    <div style="color:rgba(225, 255, 0, 0.88); text-align: center;">
+        <h1>API Prédiction de crédit</h1>
+    </div>
+    
     <div style="color:rgba(225, 255, 0, 0.88)">
         <form action="{{ url_for('predict')}}" method="post" enctype="multipart/form-data">
             <input type="file" name="file" accept=".csv">

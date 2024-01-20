@@ -6,7 +6,11 @@
     <title>Result</title>
 </head>
 <body>
-    <div style="color:rgba(225, 255, 0, 0.88)">
+    <div style="color:rgba(225, 255, 0, 0.88); text-align: center;">
+        <h1>Résultats de la prédiction</h1>
+    </div>
+    
+    <div style="color:rgba(225, 255, 0, 0.88); text-align: center;">
         {% for table in tables %}
             {{ table|safe }}
         {% endfor %}
