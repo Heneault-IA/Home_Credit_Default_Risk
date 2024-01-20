@@ -7,7 +7,8 @@ from bs4 import BeautifulSoup
 # URL de l'API
 api_url = "https://home-credi-default-risk-2d75b983d33b.herokuapp.com"
 
-data = {'NAME_CONTRACT_TYPE': {0: 0, 1: 0, 2: 0, 3: 0},
+data = {'SK_ID_CURR' : {0: 442479, 1: 437689, 2: 295534, 3: 123707},
+    'NAME_CONTRACT_TYPE': {0: 0, 1: 0, 2: 0, 3: 0},
  'FLAG_OWN_CAR': {0: 0, 1: 1, 2: 0, 3: 1},
  'FLAG_OWN_REALTY': {0: 1, 1: 1, 2: 1, 3: 1},
  'CNT_CHILDREN': {0: 0, 1: 0, 2: 0, 3: 2},
@@ -1007,9 +1008,11 @@ def make_prediction(file):
 
         # Sélectionnez toutes les lignes du tableau
         rows = soup.find_all('tr')
-
+        
         # Initialisez des listes pour stocker les numéros et les états
         numeros = []
+        ids = []
+        probas = []
         etats = []
 
         # Parcourez les lignes (à partir de la deuxième ligne, car la première est l'en-tête)
@@ -1019,13 +1022,17 @@ def make_prediction(file):
             
             # Récupérez les données des cellules
             numero = cells[0].get_text(strip=True)
-            etat = cells[1].get_text(strip=True)
+            client_id = cells[1].get_text(strip=True)
+            proba = cells[1].get_text(strip=True)
+            etat = cells[2].get_text(strip=True)
             
             # Ajoutez les données aux listes
             numeros.append(numero)
+            ids.append(client_id)
+            probas.append(proba)
             etats.append(etat)
 
-        return numeros, etats
+        return numeros, ids, probas, etats
 
     else:
         return {"error": f"Erreur de la requête : {response.status_code}"}
@@ -1043,12 +1050,19 @@ def main():
     # Bouton pour faire une prédiction
     if st.button("Faire une prédiction"):
         # Faire la prédiction en utilisant l'API
-        nums, predictions = make_prediction(csv_data)
+        nums, ids, probas, predictions = make_prediction(csv_data)
+
+        # Créez un dictionnaire avec vos données
+        data_response = {'Numéro': nums, 'ID': ids, 'Proba': probas, 'Résultat': predictions}
+
+        # Créez un DataFrame pandas à partir du dictionnaire
+        df_results = pd.DataFrame(data_response)
+        df_results.set_index('Numéro', inplace=True)
 
         # Afficher la prédiction
         st.write("Résultat de la prédiction :")
-        for num, pred in zip(nums, predictions):
-            st.write(f"Numéro: {num}, Résultat: {pred}")
+        # Affichez le DataFrame dans un tableau
+        st.write(df_results)
 
 if __name__ == "__main__":
     main()
